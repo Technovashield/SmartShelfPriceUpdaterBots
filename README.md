@@ -6,38 +6,6 @@
 
 Project Name: Woolworths Price Updates and Promotions BotTechnology Stack: UiPath Studio 25.10, UiPath Data Service, Excel/CSV, Outlook Desktop IntegrationGoal: Automate price updates in a Data Service entity based on promotional rules, using robust error handling, audit logs, and reporting.
 
-🔧 Functional Flow
-
-flowchart TD
-    A[Start: Main.xaml] --> B[Read Data: Products + Promotions CSV]
-    B --> C[Calculate Final Prices Based on Promotions]
-    C --> D[Generate Updated Products CSV and Summary Report]
-    D --> E[Update Data Service with New Final Prices]
-    E --> F{If Error Occurs}
-    F --> G[Invoke ErrorHandling.xaml]
-    G --> H[Log to File and Send Outlook Email]
-    H --> I[End]
-
-📁 Folder Structure
-
-ProjectRoot/
-├── Data/
-│   ├── ProductsData.csv
-│   ├── PromotionsData.csv
-│   └── UpdatedProductsData.csv
-├── Reports/
-│   └── ProductSummaryReport.xlsx
-├── Logs/
-│   └── ErrorLog_yyyyMMdd.txt
-├── PriceCalculation/
-│   └── CalculatePrices.xaml
-├── DataUpdate/
-│   └── UpdateData.xaml
-├── ErrorHandling/
-│   └── HandleErrors.xaml
-├── Main.xaml
-└── README.md
-
 ⚙ Workflow Files
 
 1. CalculatePrices.xaml
