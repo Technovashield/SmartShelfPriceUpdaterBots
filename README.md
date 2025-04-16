@@ -8,7 +8,15 @@ Project Name: Woolworths Price Updates and Promotions BotTechnology Stack: UiPat
 
 🔧 Functional Flow
 
-<pre> ```mermaid flowchart TD A[Start: Main.xaml] --> B[Read Data: Products + Promotions CSV] B --> C[Calculate Final Prices Based on Promotions] C --> D[Generate Updated Products CSV and Summary Report] D --> E[Update Data Service with New Final Prices] E --> F{If Error: Invoke ErrorHandling.xaml} F --> G[Log to File and Send Outlook Email] G --> H[End] ``` </pre>
+flowchart TD
+    A[Start: Main.xaml] --> B[Read Data: Products + Promotions CSV]
+    B --> C[Calculate Final Prices Based on Promotions]
+    C --> D[Generate Updated Products CSV and Summary Report]
+    D --> E[Update Data Service with New Final Prices]
+    E --> F{If Error Occurs}
+    F --> G[Invoke ErrorHandling.xaml]
+    G --> H[Log to File and Send Outlook Email]
+    H --> I[End]
 
 📁 Folder Structure
 
@@ -26,7 +34,7 @@ ProjectRoot/
 ├── DataUpdate/
 │   └── UpdateData.xaml
 ├── ErrorHandling/
-│   └── ErrorHandling.xaml
+│   └── HandleErrors.xaml
 ├── Main.xaml
 └── README.md
 
