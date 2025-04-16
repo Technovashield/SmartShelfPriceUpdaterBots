@@ -115,7 +115,7 @@ cd path/to/your/project
 git init
 git add .
 git commit -m "Initial commit: Woolworths Bot"
-git remote add origin https://github.com/your-username/woolworths-bot.git
+git remote add origin https://github.com/Technovashield/woolworths-bot.git
 git push -u origin main
 
 OR:
